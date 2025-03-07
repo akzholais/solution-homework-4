@@ -8,45 +8,56 @@ Adapter Pattern – A Chat Service Adapter that integrates a legacy chat system 
 
 Singleton Pattern:
 
-Objective:
+Objective
+
 Ensure that only one instance of a configuration manager exists throughout the application, providing a centralized, globally accessible resource.
 
-Implementation Details:
+Implementation Details
+
 The ConfigurationManager class follows the Singleton pattern.
 Stores configuration values in a hardcoded key-value pair format.
 Uses lazy initialization to create an instance only when needed.
 Provides methods to retrieve values and print all configurations.
 
-Files:
+Files
+
 ConfigurationManager.java – Implements the Singleton pattern.
 ConfigManagerDemo.java – Demonstrates retrieving and printing configurations.
 
 Output:
+
 maxPlayers: 100
+
 defaultLanguage: en
+
 gameDifficulty: medium
 
 All Configurations:
+
 maxPlayers → 100
+
 defaultLanguage → en
+
 gameDifficulty → medium
-
-
 
 Adapter Pattern:
 
-Objective:
+Objective
+
 Enable integration of a legacy chat system with our application by adapting its interface to the expected format.
 
-Implementation Details:
+Implementation Details
+
 The ChatServiceAdapter wraps around LegacyChatService and translates calls.
 Ensures the legacy system's sendLegacyMessage() can be accessed via the ChatService interface.
 
-Files:
+Files
+
 ChatService.java – Defines the target interface.
 LegacyChatService.java – Simulates the old chat service.
 ChatServiceAdapter.java – Implements the adapter to translate messages.
 ChatAdapterDemo.java – Demonstrates sending a message via the adapter.
 
 Output:
+
 Legacy Chat: Hello world!
